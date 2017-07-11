@@ -51,7 +51,9 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
-    "component": {}
+    "styleExt": "scss",
+    "poll": 2000,
+    "component": {
+    }
   }
 }
