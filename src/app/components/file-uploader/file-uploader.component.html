@@ -1,0 +1,33 @@
+<label class="uploader" ondragover="return false;"
+    [class.loaded]="loaded" 
+    [style.borderColor]="dragging ? activeColor : baseColor"
+    (dragenter)="handleDragEnter()"
+    (dragleave)="handleDragLeave()"
+    (drop)="handleDrop($event)">
+    
+    <i class="fa fa-upload" 
+        [style.color]="dragging 
+            ? ((imageSrc.length > 0) ? overlayColor : activeColor)
+            : ((imageSrc.length > 0) ? overlayColor : baseColor)"></i>
+    
+    <img 
+        [src]="imageSrc" 
+        (load)="handleImageLoad()" 
+        [ngClass]="{'loaded':imageLoaded, 'unloaded':!imageLoaded}"/>
+    
+    <input type="file" name="file" accept="image/*"
+        (change)="handleInputChange($event)">
+</label>
+<div class="file-upload__container-btn" [hidden]="!imageLoaded">
+    <span class="file-upload__btn-remove" (click)="removeImageLoad()" >
+      <i class="fa fa-trash" aria-hidden="true"></i>
+    </span>
+</div>
+<div class="file-upload__container-message">
+    <span class="file-upload__message" 
+          [class.messageError] = "showMessage"
+          [style.opacity] = "!showMessage ? 0 : 1"
+          (click)="removeImageLoad()" >
+      {{messages.error}}
+    </span>
+</div>

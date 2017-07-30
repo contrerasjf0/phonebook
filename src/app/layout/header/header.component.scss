@@ -1,26 +1,25 @@
 
 .pb-header{
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    position: relative; 
     background: #f97300;
     color: #ffffff;
-    /*border: 1px solid green;*/
+    display: flex;
+    justify-content: space-between;
+    position: relative; 
 
     .pb-header__back-btn{
       flex: 0 1 auto;
-      width: 2em;
-      height: 2em;
       font-size: 2em;
+      height: 2em;
+      left: 8%;  
       position: absolute; 
-      left: 8%;            /* new */
+      width: 2em;
     }
     .pb-header__section-title{
-        /*margin-left: 10%;*/
+
         flex: 0 1 auto;
-        position: relative;
         left: 25%;
+        position: relative;
 
         .pb-header__section-title__title{
             font-size: 1.5em;
@@ -34,19 +33,19 @@
     }
 
     .pb-header__add-btn{
-      flex: 0 1 auto;
-      width: 1.3em;
-      height: 1.3em;
-      font-size: 1.5em;
-      position: absolute; 
-      right: 5%;            /* new */
       bottom: 15%;
+      flex: 0 1 auto;
+      font-size: 1.5em;
+      height: 1.3em;
+      position: absolute; 
+      right: 5%;
       text-align: center;
+      width: 1.3em;
     }
 
     a {
-        text-decoration:none;
         color: #ffffff;
+        text-decoration:none;
     }
 }
 

@@ -1,0 +1,28 @@
+.show-phone__form-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px 15px 10px 15px;
+}
+.show-phone__form-input{
+    border: none;
+    border-bottom: 2px solid #0e3047;
+    font-size: 1em;
+    width: 100%;
+    &:focus{
+        border-bottom-color: #10828c;
+    }
+
+}
+
+.show-phone__form-btn{
+    background-color: #10828c;
+    border: 1px solid #10828c;
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 1em;
+    margin: 25px auto;
+    height: 30px;
+    width: 80%;
+
+}

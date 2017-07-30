@@ -1,0 +1,65 @@
+
+<form class="show-phone__form" 
+  [formGroup] = "phone"
+  (ngSubmit) = "onSubmit(phone)"
+  novalidate>
+      <!--<div class="show-phone__form-group">
+        <label for="" class="show-phone__form-label">Avatar :</label>
+        <input type="" name="" value="" class="show-phone__form-input">
+      </div>-->
+      <div class="show-phone__form-group">
+         <file-uploader [activeColor]="'#10828c'" [baseColor]="'#0e3047'"
+                  ></file-uploader>
+      </div>
+      <div class="show-phone__form-group">
+        <label for="" class="show-phone__form-label">Number :</label>
+          <input type="" name="" value="" class="show-phone__form-input"
+                  formControlName = "number">
+          <div class="Error"
+               *ngIf="phone.get('number').hasError('required') &&
+                      phone.get('number').touched" >
+              Number is required
+          </div>
+      </div>
+      <div class="show-phone__form-group">
+        <label for="" class="show-phone__form-label">Name :</label>
+        <input type="" name="" value="" class="show-phone__form-input"
+                formControlName = "firstName">
+          <div class="Error"
+               *ngIf="phone.get('firstName').hasError('required') &&
+                      phone.get('firstName').touched" >
+              First Name is required
+          </div>
+      </div>
+      <div class="show-phone__form-group">
+        <label for="" class="show-phone__form-label">Last name :</label>
+        <input type="" name="" value="" class="show-phone__form-input"
+                formControlName = "lastName">
+          <div class="Error"
+               *ngIf="phone.get('lastName').hasError('required') &&
+                      phone.get('lastName').touched" >
+              Last Name is required
+          </div>
+      </div>
+      <div class="show-phone__form-group">
+        <label for="" class="show-phone__form-label">Nick name :</label>
+        <input type="" name="" value="" class="show-phone__form-input"
+                formControlName="nickName">
+      </div>
+      <div class="show-phone__form-group">
+        <label for="" class="show-phone__form-label">Addres :</label>
+        <input type="" name="" value="" class="show-phone__form-input"
+                formControlName="addres">
+      </div>
+      <div class="show-phone__form-group">
+        <label for="" class="show-phone__form-label">Company :</label>
+        <input type="" name="" value="" class="show-phone__form-input"
+                formControlName="company">
+      </div>
+      <div class="show-phone__form-group">
+        <button type="submit" class="show-phone__form-btn"
+                [disabled]="phone.invalid">Edit</button>
+      </div>
+  </form>
+
+  
