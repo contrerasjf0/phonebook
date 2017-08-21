@@ -14,6 +14,7 @@ import { PbRoutingModule } from './routers/pb/pb-routing.module';
 import { FileUploaderComponent } from './components/file-uploader/file-uploader.component';
 import { FormPhoneComponent } from './components/form-phone/form-phone.component';
 import { MessageErrorComponent } from './components/message-error/message-error.component';
+import { AddPhoneComponent } from './pages/add-phone/add-phone.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { MessageErrorComponent } from './components/message-error/message-error.
     ShowPhoneComponent,
     FileUploaderComponent,
     FormPhoneComponent,
-    MessageErrorComponent
+    MessageErrorComponent,
+    AddPhoneComponent
   ],
   imports: [
     BrowserModule,

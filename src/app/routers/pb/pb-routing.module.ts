@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ListPhoneComponent } from '../../pages/list-phone/list-phone.component';
 import { ShowPhoneComponent } from '../../pages/show-phone/show-phone.component';
+import { AddPhoneComponent } from '../../pages/add-phone/add-phone.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'show/:id',
     component: ShowPhoneComponent
+  },
+  {
+    path: 'add',
+    component: AddPhoneComponent
   }
 
 ];
