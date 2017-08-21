@@ -12,12 +12,12 @@ import { Phone } from '../../interface/phone';
 export class FormPhoneComponent implements OnInit {
 
   public phone: FormGroup;
-
+  //public prue: string = 'phoneNumber';
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
    /*this.phone = new FormGroup({
-      number: new FormControl('', Validators.required),
+      phoneNumber: new FormControl('', Validators.required),
       firstName: new FormControl('', Validators.required),
       lastName: new FormControl('', Validators.required),
       nickName: new FormControl(''),
@@ -27,12 +27,12 @@ export class FormPhoneComponent implements OnInit {
     });*/
 
     this.phone = this.fb.group({
-      number: ['', Validators.required],
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      nickName: [''],
-      addres: [''],
-      company: [''],
+      phoneNumber: ['', [Validators.required, Validators.pattern(/^\+?\d{1,3}?[- .]?\(?(?:\d{2,3})\)?[- .]?\d\d\d[- .]?\d\d\d\d$/)]],
+      firstName: ['', [Validators.required,  Validators.minLength(3), Validators.maxLength(25)]],
+      lastName: ['', Validators.compose ([Validators.required,  Validators.minLength(3), Validators.maxLength(25)])],
+      nickName: ['', Validators.maxLength(10)],
+      addres: ['',  Validators.maxLength(50)],
+      company: ['', Validators.maxLength(20)],
       srcAvatar: ['']
     });
   }
@@ -41,4 +41,11 @@ export class FormPhoneComponent implements OnInit {
     console.log(value, valid);
   }
 
+  /*change($event){
+    this.prue = "hola";
+  }*/
+  /*update($event){
+   console.log(this.phone); 
+   //console.log(this.phone.get('phoneNumber').status);
+  }*/
 }

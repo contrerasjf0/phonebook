@@ -1,6 +1,6 @@
 export interface Phone {
     id:number;
-    number:string;
+    phoneNumber:string;
     firstName:string;
     lastName?:string;
     nickName?:string;

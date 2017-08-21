@@ -13,7 +13,7 @@ import { ShowPhoneComponent } from './pages/show-phone/show-phone.component';
 import { PbRoutingModule } from './routers/pb/pb-routing.module';
 import { FileUploaderComponent } from './components/file-uploader/file-uploader.component';
 import { FormPhoneComponent } from './components/form-phone/form-phone.component';
-
+import { MessageErrorComponent } from './components/message-error/message-error.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,8 @@ import { FormPhoneComponent } from './components/form-phone/form-phone.component
     ItemPhoneComponent,
     ShowPhoneComponent,
     FileUploaderComponent,
-    FormPhoneComponent
+    FormPhoneComponent,
+    MessageErrorComponent
   ],
   imports: [
     BrowserModule,

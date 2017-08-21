@@ -1,0 +1,15 @@
+.messageError{
+  background-color: #F1DEDE;
+  border: 1px solid #A94442; 
+  border-radius: 10px;
+  color: #A94442;
+  margin-top:3px; 
+  opacity: 1px;
+
+  span{
+    display: block;
+    margin: 3px auto;
+    text-align: center;
+    width: 80%;
+  }
+}

@@ -2,6 +2,6 @@
   <img class="list-phone__item-avatar"  src="{{phoneItem.srcAvatar}}" alt="{{phoneItem.nickName}}" />
   <span class="list-phone__item-name">{{phoneItem.firstName + ' ' + phoneItem.lastName}}</span>
   <span class="list-phone__item-company">{{phoneItem.company}}</span>
-  <span class="list-phone__item-number">{{phoneItem.number}}</span>
+  <span class="list-phone__item-number">{{phoneItem.phoneNumber}}</span>
   <a href="#" class="list-phone__item-see" [routerLink]="['/show',phoneItem.id]"> <i class="fa fa-eye" aria-hidden="true"></i></a>
 </li>

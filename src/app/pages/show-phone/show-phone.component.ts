@@ -21,7 +21,6 @@ export class ShowPhoneComponent implements OnInit {
      this.route.paramMap
      .switchMap((params: ParamMap) => params.get('id'))
      .subscribe(id =>{
-       console.log('id-->',id);
        this.id = id;
      });
   }
